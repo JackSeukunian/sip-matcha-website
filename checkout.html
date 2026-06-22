@@ -1,1 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout | SIP Matcha Café</title>
+  <meta name="description" content="Checkout for SIP Matcha Café shop orders.">
+  <link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+  <header class="nav checkout-nav">
+    <a href="index.html" class="logo">SIP</a>
+
+    <nav class="nav-links">
+      <a href="index.html#home">Home</a>
+      <a href="index.html#menu">Menu</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#events">Events</a>
+      <a href="index.html#visit">Visit</a>
+      <a href="index.html#shop">Shop</a>
+    </nav>
+  </header>
+
+  <main class="checkout-page">
+    <a href="index.html#shop" class="checkout-back">← Back to Shop</a>
+
+    <p class="eyebrow">CHECKOUT</p>
+    <h1>Complete your order.</h1>
+
+    <div class="checkout-layout">
+      <form id="checkoutForm" class="checkout-form">
+        <h3>Contact Information</h3>
+
+        <input type="text" id="fullName" placeholder="Full Name" required>
+        <input type="email" id="email" placeholder="Email Address" required>
+        <input type="tel" id="phone" placeholder="Phone Number" required>
+
+        <h3>Order Method</h3>
+
+        <label class="method-option">
+          <input type="radio" name="orderMethod" value="pickup" checked>
+          <span>
+            <strong>Pickup</strong>
+            <small>Pick up your order at SIP Matcha Café.</small>
+          </span>
+        </label>
+
+        <label class="method-option">
+          <input type="radio" name="orderMethod" value="delivery">
+          <span>
+            <strong>Local Delivery</strong>
+            <small>Have your order delivered locally.</small>
+          </span>
+        </label>
+
+        <div id="pickupInfo" class="pickup-info">
+          <strong>Pickup Location:</strong>
+          <p>470 Douglas Rd E<br>Oldsmar, FL 34677</p>
+        </div>
+
+        <div id="deliveryFields" class="delivery-fields">
+          <h3>Delivery Address</h3>
+          <input type="text" id="street" placeholder="Street Address">
+          <input type="text" id="apartment" placeholder="Apartment / Suite">
+          <input type="text" id="city" placeholder="City">
+          <input type="text" id="state" placeholder="State">
+          <input type="text" id="zip" placeholder="ZIP Code">
+        </div>
+
+        <textarea id="notes" placeholder="Order notes"></textarea>
+      </form>
+
+      <aside class="order-summary">
+        <h3>Order Summary</h3>
+
+        <div id="checkoutItems"></div>
+
+        <div class="summary-line">
+          <span>Subtotal</span>
+          <span id="subtotal">$0.00</span>
+        </div>
+
+        <div class="summary-line">
+          <span>Estimated Tax</span>
+          <span id="tax">$0.00</span>
+        </div>
+
+        <div class="summary-line">
+          <span>Delivery Fee</span>
+          <span id="deliveryFee">$0.00</span>
+        </div>
+
+        <div class="summary-line total">
+          <span>Total</span>
+          <span id="total">$0.00</span>
+        </div>
+
+        <button id="paymentBtn" type="button">Continue to Payment</button>
+        <p class="stripe-note">Stripe payment will connect here later.</p>
+      </aside>
+    </div>
+  </main>
+
+  <script src="checkout.js"></script>
+</body>
+</html>
