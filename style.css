@@ -469,56 +469,112 @@ textarea {
   }
 }
 
-/* Cart Modal */
-.cart-modal {
+/* Cart Drawer */
+
+.cart-icon {
+  position: relative;
+  margin-left: 20px;
+  margin-top: 0;
+  padding: 10px 16px;
+  border-radius: 50px;
+}
+
+#cartCount {
+  background: var(--cream);
+  color: var(--green);
+  border-radius: 50%;
+  padding: 2px 7px;
+  margin-left: 5px;
+  font-size: 12px;
+}
+
+.cart-overlay {
   position: fixed;
   inset: 0;
   background: rgba(31, 42, 36, 0.45);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 3000;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+  z-index: 2000;
 }
 
-.cart-modal.active {
-  display: flex;
+.cart-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
 }
 
-.cart-box {
+.cart-drawer {
+  position: fixed;
+  top: 0;
+  right: -430px;
+  width: 420px;
+  max-width: 92%;
+  height: 100%;
   background: var(--light-cream);
-  padding: 45px;
-  max-width: 420px;
-  width: 90%;
-  text-align: center;
-  position: relative;
-  border: 1px solid #e4dacd;
+  z-index: 3000;
+  transition: 0.3s;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid #e4dacd;
 }
 
-.cart-box h3 {
+.cart-drawer.active {
+  right: 0;
+}
+
+.cart-header,
+.cart-total,
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-header h3 {
   font-family: Georgia, serif;
-  font-size: 34px;
   color: var(--green);
-  margin-bottom: 12px;
+  font-size: 28px;
 }
 
-.cart-box p {
-  color: #4d5a51;
-}
-
-.close-cart {
-  position: absolute;
-  top: 12px;
-  right: 18px;
+#closeCart {
   background: none;
   border: none;
   color: var(--green);
-  font-size: 28px;
+  font-size: 34px;
   padding: 0;
   margin: 0;
 }
 
-.checkout-btn {
-  margin-top: 25px;
+.cart-item {
+  border-bottom: 1px solid #ddd2c4;
+  padding: 18px 0;
+  gap: 15px;
+}
+
+.cart-item-name {
+  font-weight: 600;
+  color: var(--green);
+}
+
+.cart-item-controls button {
+  padding: 5px 10px;
+  margin: 0 3px;
+}
+
+.cart-footer {
+  margin-top: auto;
+  border-top: 1px solid #ddd2c4;
+  padding-top: 20px;
+}
+
+.cart-total {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+#goToCheckout {
+  width: 100%;
 }
 
 /* Checkout Page */
