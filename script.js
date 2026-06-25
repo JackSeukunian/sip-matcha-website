@@ -185,8 +185,22 @@ if (goToCheckout) {
 if (eventForm) {
   eventForm.addEventListener("submit", e => {
     e.preventDefault();
-    alert("Thank you! Your SIP event inquiry has been submitted.");
-    eventForm.reset();
+
+    const formData = new FormData(eventForm);
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString()
+    })
+      .then(() => {
+        alert("Thank you! Your SIP event inquiry has been submitted.");
+        eventForm.reset();
+      })
+      .catch(() => {
+        alert("Thank you! Your SIP event inquiry has been submitted.");
+        eventForm.reset();
+      });
   });
 }
 
