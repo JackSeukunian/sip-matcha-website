@@ -118,7 +118,7 @@ h2 {
   max-width: 500px;
 }
 
-.btn, button {
+.btn, .hero button:not(.menu-toggle):not(.cart-icon), form button[type="submit"], #goToCheckout, #paymentBtn, .add-to-cart {
   display: inline-block;
   margin-top: 28px;
   padding: 15px 32px;
@@ -132,7 +132,12 @@ h2 {
   cursor: pointer;
 }
 
-.btn:hover, button:hover {
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.btn:hover, form button[type="submit"]:hover, #goToCheckout:hover, #paymentBtn:hover, .add-to-cart:hover {
   background: transparent;
   color: var(--green);
 }
@@ -265,6 +270,10 @@ input, textarea {
 
 textarea {
   min-height: 130px;
+}
+
+.hidden {
+  display: none;
 }
 
 .map iframe {
