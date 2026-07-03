@@ -21,12 +21,8 @@
   <a href="#about">About</a>
   <a href="#events">Events</a>
   <a href="#visit">Visit</a>
-  <a href="#shop">Shop</a>
+  <a href="#reviews">Reviews</a>
 </nav>
-
-<button class="cart-icon" id="openCart">
-  🛒 <span id="cartCount">0</span>
-</button>
 </header>
 
 <section id="home" class="hero">
@@ -191,44 +187,31 @@
   </div>
 </section>
 
-<section id="shop" class="section shop">
-  <p class="eyebrow">SHOP SIP</p>
-  <h2>Bring SIP home.</h2>
-  <p class="shop-intro">Create your own daily matcha ritual with our curated matcha essentials.</p>
+<section id="reviews" class="section reviews">
+  <p class="eyebrow">REVIEWS</p>
+  <h2>What people are saying.</h2>
 
-  <div class="shop-grid">
-    <div class="shop-card">
-      <img src="https://images.unsplash.com/photo-1536256263959-770b48d82b0a?auto=format&fit=crop&w=900&q=80">
-      <h3>SIP Ceremonial Matcha</h3>
-      <p>Premium Japanese matcha with a smooth, vibrant finish.</p>
-      <div class="price">$32</div>
-      <button class="add-to-cart" data-name="SIP Ceremonial Matcha" data-price="32">Add to Cart</button>
+  <div class="review-cards">
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p>"Hands down the best matcha in Tampa Bay. The Banana Pudding Matcha is unreal."</p>
+      <div class="reviewer">— Jordan M.</div>
     </div>
 
-    <div class="shop-card">
-      <img src="https://images.unsplash.com/photo-1615484477778-ca3b77940c25?auto=format&fit=crop&w=900&q=80">
-      <h3>SIP Matcha Kit</h3>
-      <p>A complete starter kit with matcha, whisk, scoop, and guide.</p>
-      <div class="price">$68</div>
-      <button class="add-to-cart" data-name="SIP Matcha Kit" data-price="68">Add to Cart</button>
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p>"Beautiful space, friendly staff, and the drinks are as good as they look on Instagram."</p>
+      <div class="reviewer">— Alexis R.</div>
     </div>
 
-    <div class="shop-card">
-      <img src="https://images.unsplash.com/photo-1517646458010-ea6bd9f4a75f?auto=format&fit=crop&w=900&q=80">
-      <h3>Bamboo Matcha Whisk</h3>
-      <p>Traditional bamboo whisk for a creamy, frothy matcha.</p>
-      <div class="price">$18</div>
-      <button class="add-to-cart" data-name="Bamboo Matcha Whisk" data-price="18">Add to Cart</button>
-    </div>
-
-    <div class="shop-card">
-      <img src="https://images.unsplash.com/photo-1609501676725-7186f017a4b7?auto=format&fit=crop&w=900&q=80">
-      <h3>Matcha Bowl</h3>
-      <p>A beautiful ceramic bowl for preparing your matcha ritual.</p>
-      <div class="price">$28</div>
-      <button class="add-to-cart" data-name="Matcha Bowl" data-price="28">Add to Cart</button>
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p>"Booked SIP for a brand pop-up and our guests are still talking about it. So professional."</p>
+      <div class="reviewer">— Taylor B.</div>
     </div>
   </div>
+
+  <a href="https://search.google.com/local/writereview?placeid=ChIJcbcbghLtwogR5w2FF8lqlq0" target="_blank" rel="noopener noreferrer" class="btn">Leave Us a Review</a>
 </section>
 
 <footer class="footer">
@@ -277,26 +260,6 @@
   </div>
 </footer>
 
-<div class="cart-drawer" id="cartDrawer">
-  <div class="cart-header">
-    <h3>Your Cart</h3>
-    <button id="closeCart">×</button>
-  </div>
-
-  <div id="cartItems"></div>
-
-  <div class="cart-footer">
-    <div class="cart-total">
-      <span>Total</span>
-      <strong id="cartTotal">$0.00</strong>
-    </div>
-
-    <button id="goToCheckout">Continue to Checkout</button>
-  </div>
-</div>
-
-<div class="cart-overlay" id="cartOverlay"></div>
-  
   <script src="script.js"></script>
 </body>
 </html>
