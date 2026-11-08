@@ -64,3 +64,26 @@ if (eventForm) {
       });
   });
 }
+
+// Menu tabs
+const menuTabs = document.querySelectorAll(".menu-tab");
+const menuPanels = document.querySelectorAll(".menu-panel");
+
+menuTabs.forEach(tab => {
+  tab.addEventListener("click", () => {
+    menuTabs.forEach(t => {
+      t.classList.remove("active");
+      t.setAttribute("aria-selected", "false");
+    });
+    menuPanels.forEach(p => {
+      p.classList.remove("active");
+      p.hidden = true;
+    });
+
+    tab.classList.add("active");
+    tab.setAttribute("aria-selected", "true");
+    const panel = document.getElementById(tab.dataset.target);
+    panel.hidden = false;
+    panel.classList.add("active");
+  });
+});
