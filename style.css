@@ -262,9 +262,3 @@ textarea { min-height: 130px; }
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; }
 }
-
-@media (max-width: 768px) {
-  .hero-image {
-    object-position: 70% center;
-  }
-}
